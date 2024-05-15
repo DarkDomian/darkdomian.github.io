@@ -1,45 +1,56 @@
+:root {
+    --black: #151319;
+    --white: #f3fcf0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: SelectedFont;
+    src: url(../fonts/CourierPrime-Regular.ttf);
+    /* font-family: SelectedFont;
+    src: url(../fonts/FiraCode-Regular.ttf); */
+    /* font-family: SelectedFont;
+    src: url(../fonts/Hack-Regular.ttf);     */
+    /* font-family: SelectedFont;
+    src: url(../fonts/JosefinSlab-Regular.ttf); */
+    /* font-family: SelectedFont;
+    src: url(../fonts/KodeMono-Regular.ttf); */
+    /* font-family: SelectedFont;
+    src: url(../fonts/Montserrat-Regular.ttf); */
+    /* font-family: SelectedFont;
+    src: url(../fonts/PressStart2P-Regular.ttf); */
+    /* font-family: SelectedFont;
+    src: url(../fonts/SometypeMono-Regular.ttf); */
+}
+    
 @media (prefers-color-scheme: dark) {
+    :root {
+        --accent: #FF69E4;
+    }
+
     body {
-        background-color: black;
-        color: white;
-        font-family: JetBrainsMono, serif;
-        display: flex;
-        flex-direction: column;
-        margin: 0 10%;
-    }
-
-    a {
-        color: aqua;
-        text-decoration: none;
-    }
-
-    a:hover {
-        color: aqua;
-        text-decoration: #ff66cc underline;
+        background-color: var(--black);
+        color: var(--white);
     }
 
     .inverted-svg {
-        filter: invert(1);
+        filter: invert(89%) sepia(75%) saturate(46%) hue-rotate(42deg) brightness(102%) contrast(98%);
     }
 }
 
 @media (prefers-color-scheme: light) {
+    :root {
+        --accent: #E00070;
+    }
+    
     body {
-        background-color: white;
-        font-family: JetBrainsMono, serif;
-        color: black;
-        display: flex;
-        flex-direction: column;
-        margin: 0 10%;
-    }
-
-    a {
-        color: #ff66cc;
-        text-decoration: none;
-    }
-    a:hover {
-        color: #ff66cc;
-        text-decoration: aqua  underline;
+        background-color: var(--white);
+        color: var(--black);        
     }
 
     .inverted-svg {
@@ -47,20 +58,50 @@
     }
 }
 
+body {
+    font-family: SelectedFont, sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 10%;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0.4em;
+
+    position: relative;
+
+    transition: color 0.5s ease;
+}
+a[download] {
+    margin-bottom: 0;
+}
+
+a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    background: var(--accent);
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transition-delay: 0.2s;
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+    width: 0;
+}
+a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
 @media only screen and (max-width: 1000px) {
     .main-text {
         font-size: 300% !important;
     }
-}
-
-.center-text {
-    text-align: center !important;
-}
-
-.centered-text {
-    text-align: center;
-    margin: 0 auto;
-    display: block;
 }
 
 .main-text {
@@ -73,56 +114,16 @@
     margin-right: auto;
 }
 
-.header-link-text {
+.title {
     margin-top: 3%;
-    margin-bottom: 2%;
+    margin-bottom: 0;
     font-size: 500%;
+    line-height: 1em;
     text-align: center;
-    font-family: JetBrainsMono, serif;
     display: flex;
     flex-direction: column;
-    text-decoration: none;
+
     color: inherit;
-}
-
-.jetBrainsMono {
-    font-family: JetBrainsMono, serif;
-}
-
-.jetBrainsMono-link {
-    margin-top: 3%;
-    font-family: JetBrainsMono, serif;
-    font-size: 330%;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    text-decoration: none;
-    color: inherit;
-}
-
-.blog-link {
-    text-align: left;
-    color: inherit;
-    font-weight: bold;
-}
-
-li.blog {
-    font-size: 150%;
-}
-
-@font-face {
-    font-family: JetBrainsMono;
-    src: url(../fonts/JetBrainsMono-Regular.ttf);
-}
-
-.footer-text {
-    font-weight: bold;
-    text-align: center;
-    font-family: JetBrainsMono, serif;
-}
-
-.bold {
-    font-weight: bold;
 }
 
 html, body {
@@ -130,53 +131,15 @@ html, body {
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
     flex: 1 0 auto;
 }
 
 .contacts {
     column-count: 2;
     column-gap: 20px;
-}
-
-.footer {
-    flex-shrink: 0;
-}
-
-.menu {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    margin: 0 10% 8%;
-}
-
-.pager {
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-}
-
-iframe.page-frame {
-    width: 100%;
-    display: block;
-    height: 100vh;
-    border-style: none;
-}
-
-.pages-list {
-    margin-top: 5%;
-}
-
-.blog-content {
-    font-size: 150%;
-    width: 98%;
-    margin-top: 10%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-p.first-line-margin {
-    text-indent: 10%;
 }
 
 .inline-image-container {
@@ -189,4 +152,6 @@ p.first-line-margin {
     max-height: 100%;
 }
 
-/*TODO add max width for text */
+footer p {
+    margin-bottom: 1em;
+}
