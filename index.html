@@ -6,6 +6,12 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
+    <div class="blocking-window">
+        <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
     <div class="content">
         <div>
             <p class="title main-text">Demian<br>Domozhirov</p>
@@ -60,12 +66,54 @@
                 <a href="https://github.com/DarkDomian" target="_blank">GitHub</a>
                 <br>
             </div>
-        </div>
-        
+        </div>   
     </div>
-    
+
     <footer class="footer">
         <p class="unimportant">@DarkDomian</p>
+        <script>
+            let progressBarWidth = 0;
+
+            function updateProgressBar() {
+                progressBarWidth += 1;
+                if (progressBarWidth <= 100) {
+                    document.querySelector('.progress-bar').style.width = `${progressBarWidth}%`;
+                    document.querySelector('.progress-bar').style.left = `${50 - (progressBarWidth / 2)}%`;
+                    requestAnimationFrame(updateProgressBar);
+                } else {
+                    document.querySelector('.progress-bar-container').classList.add('loaded');
+                    setTimeout(function() {
+                        document.body.classList.add('loaded');
+                    }, 700);
+                    setTimeout(function() {
+                        document.querySelector('.blocking-window').classList.add('loaded');
+                    }, 800);
+                }
+            }
+
+            window.addEventListener('load', () => {
+                updateProgressBar();
+            });
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const mediaFiles = document.querySelectorAll('img, video')
+                let i = 0
+
+                Array.from(mediaFiles).forEach((file, index) => {
+                    file.onload = () => {
+                        i++
+                        
+                        percents = ((i * 100) / mediaFiles.length).toFixed();
+                        if (i === mediaFiles.length) {
+                            
+                        }
+                    }
+                })
+            });
+            // here will be realy informative preloading, when it will need
+            // idia for making was findeing on the link: https://youtu.be/Su6HY_Fpt6w?si=RfdB_QjQZinPU2MY
+
+        </script>
     </footer>
 </body>
 </html>

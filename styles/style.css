@@ -28,6 +28,14 @@
         color: var(--white);
     }
 
+    .progress-bar-container {
+        background-color: var(--black);
+    }
+    
+    .progress-bar {
+        background-color: var(--accent);
+    }
+
     .inverted-svg {
         filter: invert(89%) sepia(75%) saturate(46%) hue-rotate(42deg) brightness(102%) contrast(98%);
     }
@@ -43,6 +51,14 @@
         color: var(--black);        
     }
 
+    .progress-bar-container {
+        background-color: var(--white);
+    }
+    
+    .progress-bar {
+        background-color: var(--accent);
+    }
+
     .inverted-svg {
         filter: invert(0);
     }
@@ -55,6 +71,46 @@ body {
     flex-direction: column;
     text-align: center;
     margin: 0 10%;
+}
+.progress-bar-container {
+    width: 60%;
+    height: 4px;
+    overflow: hidden;
+
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    opacity: 1;
+    transition: opacity 0.5s ease 0s;
+}
+
+.progress-bar {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    left: 50%;
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+}
+
+.blocking-window {
+    z-index: 998;
+    position: absolute;
+    /* background: red; */
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.loaded.progress-bar-container {
+    opacity: 0;
+}
+
+.loaded.blocking-window {
+    display: none;
 }
 
 a {
@@ -144,6 +200,18 @@ html, body {
     margin-right: auto;
     gap: 2em;
     flex: 1 0 auto;
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+}
+
+body.loaded > .content {
+    opacity: 1;
+    transform: translateY(0px);
+}
+body.loaded > footer {
+    opacity: 1;
 }
 
 .contacts {
@@ -160,4 +228,9 @@ html, body {
     opacity: 0.7;
     vertical-align: middle;
     max-height: 100%;
+}
+
+footer.footer {
+    opacity: 0;
+    transform: opacity 0.3s ease 0s;
 }
