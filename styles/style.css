@@ -346,6 +346,8 @@ article {
     flex-direction: column;
     gap: 15px;
 
+    container-type: inline-size;
+
     border: 2px solid var(--accent);
     border-radius: 0.5em;
     margin-bottom: 1rem;
@@ -359,17 +361,38 @@ article {
 
 .discription {
     text-align: left;
-    font-size: 1.5rem;
+
+    font-size: 2cqh;
     line-height: 2em;
     color: rgba();
 }
-.discription > span {
+.discription  span {
     color: var(--accent);
 
-    padding: 4px;
+    padding: 2px;
     opacity: 1;
     border: 1px solid var(--accent);
     border-radius: 2px;
+}
+
+
+.discription ul {
+    padding-left: 20px;
+}
+.discription ul > li {
+    list-style-type: circle;
+}
+.discription ul > li::marker {
+    color: var(--accent);
+}
+
+.discription  span.unimportant {
+    font-size: inherit;
+    padding: 0;
+    color: inherit;
+    display: inline;
+    opacity: 0.7;
+    border: none;
 }
 
 .links {
@@ -377,13 +400,6 @@ article {
     display: flex;
     justify-content: space-around;
 }
-
-/* .img-holder {
-    width: 60%;
-}
-.img-holder > img {
-
-} */
 
 footer.footer {
     height: 34px;
