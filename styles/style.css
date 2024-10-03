@@ -366,7 +366,7 @@ body.loaded > footer {
 
 article {
     height: calc(100% - 1rem);
-    min-width: 500px;
+    min-width: 60vh;
     padding: 10px;
 
     display: flex;
