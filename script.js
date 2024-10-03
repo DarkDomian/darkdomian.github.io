@@ -9,7 +9,7 @@ function textChanger() {
         isProject = !isProject;
 
         buttonText.classList.remove('hidden');
-    }, 400);
+    }, 650);
 }
 
 shiftButton.addEventListener('click', function(event) {
