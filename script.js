@@ -1,24 +1,37 @@
 let shiftButton = document.querySelector('.to-work');
+let buttonText = document.querySelector('.to-work > p');
+let isProject = true;
+
+function textChanger() {
+    buttonText.classList.add('hidden');
+    setTimeout(() => {
+        buttonText.textContent = isProject ? 'visit card' : 'projects';
+        isProject = !isProject;
+
+        buttonText.classList.remove('hidden');
+    }, 400);
+}
 
 shiftButton.addEventListener('click', function(event) {
-    let rightDistance = window.innerWidth -  shiftButton.getBoundingClientRect()['x'];
-    console.log('It was click! and distance are: ', rightDistance);
+    let rightDistance = window.innerWidth -  shiftButton.getBoundingClientRect()['right'];
 
     if (shiftButton.classList.contains('on')) {
         document.querySelector('.content').classList.remove('hidden');
+        document.querySelector('.to-work').classList.remove('scaled');
         document.querySelector('.my-works').classList.add('hidden');
 
-        shiftButton.innerHTML = '<p>projects</p>';
+        textChanger();
 
         shiftButton.style.setProperty('transform', 'none');
         shiftButton.classList.remove('on');
     } else {
         document.querySelector('.content').classList.add('hidden');
+        document.querySelector('.to-work').classList.add('scaled');
         document.querySelector('.my-works').classList.remove('hidden');
 
-        shiftButton.innerHTML = '<p>visit card</p>';
-       
-        shiftButton.style.setProperty('transform', `translateX(${rightDistance + 5}px)`); //removed rotate(180deg)
+        textChanger();
+      
+        shiftButton.style.setProperty('transform', `translateX(${rightDistance + 105}px)`); //removed rotate(180deg)
         shiftButton.classList.add('on');
     }
 })

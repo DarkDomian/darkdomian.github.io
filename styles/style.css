@@ -22,7 +22,8 @@
     
 @media (prefers-color-scheme: dark) {
     :root {
-        --accent: #FF69E4;
+        --accent: #e00070;
+        --border-color: rgba(243, 252, 240, 0.5);
     }
 
     body {
@@ -63,7 +64,8 @@
 
 @media (prefers-color-scheme: light) {
     :root {
-        --accent: #E00070;
+        --accent: #dd00b4;
+        --border-color: rgba(21, 19, 25, 0.5);
     }
     
     body {
@@ -150,6 +152,7 @@ a {
 a[download] {
     text-transform: uppercase;
     margin-bottom: 0;
+    font-size: 150%;
 }
 
 a:after {    
@@ -188,7 +191,7 @@ a:hover:after {
 .unimportant {
     display: inline-block;
     margin-bottom: 1rem;
-    font-size: 75%;
+    font-size: 65%;
 }
 
 .stack {
@@ -202,7 +205,7 @@ a:hover:after {
 .title {
     margin-top: 1.5rem;/* was 3% */
     margin-bottom: 1rem;
-    font-size: 5rem;
+    font-size: 8rem;
     line-height: 0.88em;
 
     position: relative;
@@ -232,6 +235,11 @@ html, body {
     transition: opacity 0.3s ease 0s, transform 0.8s ease 0s;
 }
 
+.box-with-button {
+    display: flex;
+    flex-direction: row;
+}
+
 .content.hidden {
     transform: translateX(-100vw);
 }
@@ -259,26 +267,42 @@ html, body {
     /* border-radius: 0.5em; for rectangle with arrow */
 
     border-radius: 50%; /* for cercle with text */
-    border: 2px solid var(--accent);
+    border: 2px solid var(--border-color);
     display: flex;
     justify-content: center;
     align-items: center;
 
-    height: 5.75em;
-    width: 5.75em;
+    height: 100%;
+    aspect-ratio: 1 / 1;
     padding: 6px;
+    margin-left: auto;
     /* background-color: var(--accent); */
-    transition: transform 0.8s ease 0s;
+    transition: transform 0.8s ease 0s, color 0.8s ease 0s, border-color 0.8s ease 0s, height 0.8s ease 0s, font-size 0.8s ease 0s;
 }
 
 .to-work > p {
-    font-size: 0.75rem;
-    margin: auto;
+    font-size: 2.5rem;
+    transition: font-size 0.8s ease 0s, opacity 0.4s linear;
+    opacity: 1;
+
+    white-space: wrap;
     text-transform: uppercase;
+    margin: auto;
+}
+.to-work > p.hidden {
+    opacity: 0;
 }
 
 .to-work:hover {
     cursor: pointer;
+    color: var(--accent);
+    border-color: var(--accent);
+}
+.on {
+    height: 100px;
+}
+.on > p {
+    font-size: 1rem;    
 }
 
 body.loaded > .content {
@@ -290,7 +314,10 @@ body.loaded > footer {
 
 .contacts {
     column-count: 2;
-    column-gap: 10rem;
+    column-gap: 6rem;
+}
+.contacts > a {
+    font-size: 90%;
 }
 
 .inline-image-container {
@@ -344,7 +371,6 @@ article {
 
     display: flex;
     flex-direction: column;
-    gap: 15px;
 
     container-type: inline-size;
 
@@ -354,17 +380,15 @@ article {
 }
 
 .project-name {
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
 }
-.card-stack {font-size: 1.5em;}
 
 .discription {
     text-align: left;
 
-    font-size: 2cqh;
+    font-size: 1.8cqh;
     line-height: 2em;
-    color: rgba();
 }
 .discription  span {
     color: var(--accent);
