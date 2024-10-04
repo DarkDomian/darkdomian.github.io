@@ -173,15 +173,6 @@ a:hover:after {
     left: 0; 
 }
 
-@media only screen and (max-width: 1000px) {
-    .main-text {
-        font-size: 3rem;
-    }
-    .title {
-        font-size: 5rem;
-    }
-}
-
 .main-text {
     max-width: max-content;
     text-align: justify;
@@ -311,6 +302,9 @@ body.loaded > .content {
 body.loaded > footer {
     opacity: 1;
 }
+body.loaded > .my-works {
+    opacity: 1;
+}
 
 .contacts {
     column-count: 2;
@@ -341,6 +335,8 @@ body.loaded > footer {
     height: calc(100vh - 34px);
     width: 90%;
     transition: transform 0.8s ease 0s;
+
+    opacity: 0;
 
     overflow-x: hidden;
     display: flex;
@@ -432,4 +428,53 @@ footer.footer {
     height: 34px;
     opacity: 0;
     transition: opacity 0.3s ease 0s;
+}
+
+@media only screen and (max-width: 1024px) {
+    html, body {
+        overflow: auto;
+        overflow-x: hidden;
+        height: max-content;
+        gap: 20px;
+    }
+
+    .main-text {
+        font-size: 3rem;
+    }
+    .title {
+        font-size: 7rem;
+    }
+
+    .my-works.hidden {
+        height: max-content;
+        width: 100%;
+        margin: 0;
+        overflow: auto;
+        position: inherit;
+        transform: none;
+    }
+
+    article {
+        height: max-content;
+        min-width: 100%;
+        margin-bottom: 0;
+
+        gap: 5px;
+    }
+    
+    .project-list {
+        height: fit-content;
+        overflow: hidden;
+        padding: 0;
+
+        flex-direction: column;
+    }
+
+    .links {
+        font-size: 1.8rem;
+    }
+
+    .to-work {
+        display: none;
+    }
 }
