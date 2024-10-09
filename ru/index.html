@@ -34,9 +34,12 @@
     <meta charset="utf-8">
     <title>Демьян Д</title>
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <link rel="shortcut icon" href="../images/favicon.svg" type="image/x-icon">
 </head>
 <style>
     .to-english {
+        font-size: 1.7rem;
+
         position: fixed;
         top: 5px;
         left: 5px;
@@ -52,6 +55,17 @@
         font-family: SelectedFont;
         src: url(../fonts/Overpass-Regular.ttf);
     }
+    @media only screen and (max-width: 1024px){
+        .to-english {
+            position: absolute;
+
+            font-size: 2.5rem;
+            left: unset;
+
+            top: 30px;
+            right: 15px;
+        }
+    }
 
     .title {
         left: 0;
@@ -64,7 +78,12 @@
             <div class="progress-bar"></div>
         </div>
     </div>
-    <div class="to-english"><a href="https://darkdomian.github.io">English</a></div>
+    <div class="to-english">
+        <span class="inline-image-container">
+            <img src="../images/translate-svgrepo-com.svg" class="inline-image inverted-svg" />
+        </span>
+        <a href="https://darkdomian.github.io">English</a>
+    </div>
 
     <div class="content">
         <div>
