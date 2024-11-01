@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
-import './index.css'
+import '../index.css'
 
 export default function ThemeSwitcher() {
   const [isDarkMode, setIsDarkMode] = useState(
@@ -20,9 +20,9 @@ export default function ThemeSwitcher() {
   return (
     <button
       onClick={() => setIsDarkMode(!isDarkMode)}
-      className="p-2 rounded-full bg-gray-200 dark:bg-gray-800"
+      className="switcher"
     >
-      {isDarkMode ? <FaSun className="text-yellow-400" /> : <FaMoon className="text-blue-500" />}
+      {isDarkMode ? <FaSun className="text-light" /> : <FaMoon className="text-dark" />}
     </button>
   );
 }

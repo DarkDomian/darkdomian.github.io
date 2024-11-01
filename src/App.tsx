@@ -1,5 +1,8 @@
 import './index.css'
-import ThemeSwitcher from './ThemeSwitcher';
+import ThemeSwitcher from './components/ThemeSwitcher';
+import AnimatedLink from './components/AnimatedLink'
+
+// localization
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 
@@ -30,17 +33,19 @@ function App() {
   };
 
   return (
-    <div className="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark min-h-screen flex items-center justify-center">
+    <div className="bg-light dark:bg-dark text-dark dark:text-light min-h-screen flex flex-col items-center justify-center">
       <ThemeSwitcher />
       <button
         onClick={toggleLanguage}
-        className="p-2 border rounded-md bg-gray-200 hover:bg-gray-300 m-4"
+        className="switcher"
       >
         {i18n.language === 'en' ? 'RU' : 'EN'}
       </button>
 
-      <h1 className="text-3xl font-bold mb-4">{t('welcome')}</h1>
+      <h1 className="text-3xl font-bold mb-4 text-accent">{t('welcome')}</h1>
       <p className="text-lg">{t('description')}</p>
+      <AnimatedLink icon='link' children='random link' href='' />
+      <AnimatedLink />
       
     </div>
   )

@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.switcher {
+    @apply p-2 rounded-full bg-light-200 dark:bg-dark-400 hover:bg-light-300 dark:hover:bg-dark-300 m-4;
+}

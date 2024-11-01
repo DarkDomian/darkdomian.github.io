@@ -1,5 +1,10 @@
 {
     "welcome": "Добро пожаловать",
-    "description": "Это многоязычное React приложение."
+    "description": "Это многоязычное React приложение.",
+    "404": {
+        "title": "404 - Page Not Found",
+        "description": "Sorry, the page you are looking for does not exist.",
+        "goBack": "Go Back"
+    }
 }
   
