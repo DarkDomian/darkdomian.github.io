@@ -23,6 +23,7 @@ export default function ThemeSwitcher() {
       className="switcher"
     >
       {isDarkMode ? <FaSun className="text-light" /> : <FaMoon className="text-dark" />}
+      <span className="click-effect"></span>
     </button>
   );
 }

@@ -1,6 +1,6 @@
 {
-    "welcome": "Welcome",
-    "description": "This is a multilingual React application.",
+    "welcome": "Добро пожаловать",
+    "description": "Это многоязычное React приложение.",
     "404": {
     "title": "404 - Страница не найдена",
     "description": "Извините, страница, которую вы ищете, не существует.",

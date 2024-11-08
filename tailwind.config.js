@@ -6,6 +6,25 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
+    animation: {
+      'preloader-line': 'preloaderGlow 3s cubic-bezier(0.4, 0, 0.2, 1) infinite'
+    },
+    keyframes: {
+      preloaderGlow: {
+        '0%': {
+          transform: 'scaleX(0.7)',
+          boxShadow: '0 0 10px rgba(173, 20, 87, 0.6)',
+        },
+        '50%': {
+          transform: 'scaleX(1)',
+          boxShadow: '0 0 30px rgba(173, 20, 87, 0.8)',
+        },
+        '100%': {
+          transform: 'scaleX(0.7)',
+          boxShadow: '0 0 10px rgba(173, 20, 87, 0.6)',
+        },
+      },
+    },
     extend: {
       colors: {
         'dark': {

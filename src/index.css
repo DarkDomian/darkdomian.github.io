@@ -3,5 +3,8 @@
 @tailwind utilities;
 
 .switcher {
-    @apply p-2 rounded-full bg-light-200 dark:bg-dark-400 hover:bg-light-300 dark:hover:bg-dark-300 m-4;
+    @apply relative p-2 rounded-full transition-all duration-200 bg-light-200 dark:bg-dark-400 hover:bg-light-300 dark:hover:bg-dark-300 aspect-square;
+}
+.click-effect {
+    @apply absolute inset-0 border-2 border-transparent rounded-full transition duration-300 ease-in-out hover:border-blue-300;
 }
