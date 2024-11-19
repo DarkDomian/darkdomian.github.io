@@ -5,32 +5,37 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BEPM969QEV"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-BEPM969QEV');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BEPM969QEV');
     </script>
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-    
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
         ym(98545608, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
         });
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/98545608" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/98545608" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
     <!-- /Yandex.Metrika counter -->
     <meta charset="utf-8">
     <title>Demian D</title>
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles/style.css?v=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -46,7 +51,7 @@
 
     <div class="content">
         <div>
-            <p class="title main-text">Demian<br>Domozhirov</p>
+            <p id="person" class="title main-text">Demian<br>Domozhirov</p>
 
             <p class="main-text stack">
                 <span>Junior Frontend Developer</span>
@@ -112,7 +117,150 @@
     <div class="my-works hidden">
         <span class="title main-text">PROJECTS</span>
         <div class="project-list">
-            <article>
+            <article style="grid-area: mg-layout;">
+                <div class="links">
+                    <div>
+                        <span class="inline-image-container">
+                            <img src="images/github.svg" class="inline-image inverted-svg" />
+                        </span>
+                        <a href="https://github.com/DarkDomian/Pavan-MG-layout">code</a>
+                    </div>
+                    <div>
+                        <h4 class="project-name">MG Layout</h4>
+                    </div>
+                    <div>
+                        <span class="inline-image-container">
+                            <img src="images/link.svg" class="inline-image inverted-svg" />
+                        </span>
+                        <a href="https://darkdomian.github.io/Pavan-MG-layout/">view live</a>
+                    </div>
+                </div>
+                <div class="discription">
+                    Clean <span>markup</span> and nothing more. <span>HTML</span> and <span>CSS</span> only.
+                </div>
+            </article>
+            <article style="grid-area: filmform;">
+                <div class="links">
+                    <div>
+                        <span class="inline-image-container">
+                            <img src="images/github.svg" class="inline-image inverted-svg" />
+                        </span>
+                        <a href="https://github.com/DarkDomian/FilmForm">code</a>
+                    </div>
+                    <div>
+                        <h4 class="project-name">Film Form</h4>
+                    </div>
+                    <div>
+                        <span class="inline-image-container">
+                            <img src="images/link.svg" class="inline-image inverted-svg" />
+                        </span>
+                        <a href="https://darkdomian.github.io/FilmForm/">view live</a>
+                    </div>
+                </div>
+                <div class="discription">
+                    A compact <span>React</span> project featuring a multi-step movie production form. The form includes
+                    <span>field validation</span>, data persistence via <span>localStorage</span>, and an adaptive
+                    <span>paginator-progress bar</span> component that dynamically adjusts to the number of steps.
+                </div>
+            </article>
+            <article style="grid-area: aw-lending;">
+                <div class="links">
+                    <div>
+                        <span class="inline-image-container">
+                            <img src="images/github.svg" class="inline-image inverted-svg" />
+                        </span>
+                        <a href="https://github.com/DarkDomian/ArmstrongWerth">code</a>
+                    </div>
+                    <div>
+                        <h3 class="project-name">AW landing</h3>
+                    </div>
+                    <div>
+                        <span class="inline-image-container">
+                            <img src="images/link.svg" class="inline-image inverted-svg" />
+                        </span>
+                        <a href="https://new.aw-oboe.com.au">view live</a>
+                    </div>
+                </div>
+                <div class="discription">
+                    A complete rebuild of an unmanageable WordPress site into a <span>static website</span>, designed
+                    and coded from scratch. The project features a contact form implemented with <span>PHP</span> for
+                    submission, including <span>validation</span> that effectively blocks bots (a key improvement over
+                    the previous version). Built using pure <span>HTML</span>, <span>CSS</span>, and
+                    <span>JavaScript</span>, with smooth animations powered by <span>GSAP</span>. The design was
+                    provided in <span>Figma</span>, and I translated the layouts into code.
+                </div>
+            </article>
+            <article style="grid-area: cubedraw;">
+                <div class="links">
+                    <div>
+                        <span class="inline-image-container">
+                            <img src="images/github.svg" class="inline-image inverted-svg" />
+                        </span>
+                        <a href="https://github.com/DarkDomian/draw-the-cube">code</a>
+                    </div>
+                    <div>
+                        <h3 class="project-name">CubeDraw</h3>
+                    </div>
+                    <div>
+                        <span class="inline-image-container">
+                            <img src="images/link.svg" class="inline-image inverted-svg" />
+                        </span>
+                        <a href="https://dd-cubedraw.vercel.app">view live</a>
+                    </div>
+                </div>
+                <div class="discription">
+                    A <span>React</span> app built with <span>TypeScript</span> and <span>Ant Design</span>, bundled
+                    using <span>Vite</span>. The app renders a cuboid based on user-provided dimensions, with its
+                    vertices calculated via a custom <span>API</span>. Features include <span>client-side
+                        rendering</span> and support for <span>two themes</span>.
+                </div>
+            </article>
+            <article style="grid-area: blog;">
+                <div class="links">
+                    <div>
+                        <span class="inline-image-container">
+                            <img src="images/github.svg" class="inline-image inverted-svg" />
+                        </span>
+                        <a href="https://github.com/DarkDomian/personal-blog">code</a>
+                    </div>
+                    <h3 class="project-name">Personal Blog</h3>
+                    <div>
+                        <span class="inline-image-container">
+                            <img src="images/link.svg" class="inline-image inverted-svg" />
+                        </span>
+                        <a href="https://domozhirov.vercel.app">view live</a>
+                    </div>
+                </div>
+                <div class="discription">
+                    A <span>Next.js</span>-powered <span>i18n</span> blog platform <span>coming soon</span> designed
+                    for publishing multilingual articles and boosting visibility. Built with <span>TypeScript</span> and
+                    <span>Tailwind CSS</span>, it generates <span>static pages</span> server-side and integrates the
+                    <span>telegra.ph API</span> for seamless article creation.
+                </div>
+            </article>
+            <article style="grid-area: todo;">
+                <div class="links">
+                    <div>
+                        <span class="inline-image-container">
+                            <img src="images/github.svg" class="inline-image inverted-svg" />
+                        </span>
+                        <a href="https://github.com/DarkDomian/todo">code</a>
+                    </div>
+                    <h3 class="project-name">ToDo</h3>
+                    <div>
+                        <span class="inline-image-container">
+                            <img src="images/link.svg" class="inline-image inverted-svg" />
+                        </span>
+                        <a href="https://darkdomian.github.io/todo/">view live</a>
+                    </div>
+                </div>
+                <div class="discription">A simple <span>To-Do</span> application built with <span>React</span>,
+                    <span>TypeScript</span>, and <span>MUI</span>, designed for ease of use. It saves tasks to
+                    <span>localStorage</span>, allowing users to create, mark as completed, and delete tasks.
+                </div>
+            </article>
+
+            <!-- <article>
                 <h3 class="project-name">AW lending page</h3>
                 <p class="stack">
                     <span>HTML/</span>
@@ -126,7 +274,6 @@
                         cards and a user-friendly submission form, designed to boost engagement and simplify customer
                         inquiries for an online shop.</span><br>
                     <b>Features I'm proud of:</b><br>
-                    <!-- Implemented features: -->
                     <ul>
                         <li>Interactive behavior of elements <span class="unimportant">(timeline, menu, product cards,
                                 catalog, etc.)</span></li>
@@ -138,8 +285,6 @@
                         </li>
                         <li>Uploaded static files to the server using <span>SFTP</span>, <span class="unimportant">as
                                 SSH access was not available</span></li>
-                        <!-- <li>Laying out a website, deploying it to a server, and fulfilling my first
-                            commercial order with no experience</li> -->
                     </ul>
                 </div>
                 <div class="links">
@@ -194,7 +339,7 @@
                     </div>
                 </div>
 
-            </article>
+            </article> -->
         </div>
     </div>
 
@@ -243,7 +388,7 @@
             // idia for making was findeing on the link: https://youtu.be/Su6HY_Fpt6w?si=RfdB_QjQZinPU2MY
 
         </script>
-        <script src="script.js"></script>
+        <script src="script.js?v=1.0"></script>
     </footer>
 </body>
 
